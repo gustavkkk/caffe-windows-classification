@@ -1,0 +1,5 @@
+Log file created at: 2016/12/15 18:52:06
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1215 18:52:06.468317  7276 caffe.cpp:246] Use CPU.
+F1215 18:52:06.503316  7276 io.cpp:36] Check failed: fd != -1 (-1 vs. -1) File not found: TrainedCaffeNet4OpenCV\bvlc_googlenet.prototxt

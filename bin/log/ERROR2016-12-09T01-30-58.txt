@@ -1,0 +1,9 @@
+Log file created at: 2016/12/09 01:30:58
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E1209 01:30:58.587599  7848 caffe.cpp:71] Available caffe actions:
+E1209 01:30:58.592613  7848 caffe.cpp:74] 	device_query
+E1209 01:30:58.593592  7848 caffe.cpp:74] 	test
+E1209 01:30:58.594595  7848 caffe.cpp:74] 	time
+E1209 01:30:58.595625  7848 caffe.cpp:74] 	train
+F1209 01:30:58.596611  7848 caffe.cpp:76] Unknown action: ?

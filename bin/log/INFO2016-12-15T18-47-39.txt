@@ -1,0 +1,5 @@
+Log file created at: 2016/12/15 18:47:39
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1215 18:47:39.219254  6432 caffe.cpp:237] Use GPU with device ID 0
+F1215 18:47:39.307291  6432 common.cpp:94] Cannot use GPU in CPU-only Caffe: check mode.

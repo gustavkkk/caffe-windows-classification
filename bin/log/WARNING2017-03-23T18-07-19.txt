@@ -1,0 +1,4 @@
+Log file created at: 2017/03/23 18:07:19
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0323 18:07:19.926656] Note that future Caffe releases will only support input layers and not input fields.

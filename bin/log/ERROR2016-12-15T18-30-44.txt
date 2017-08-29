@@ -1,0 +1,5 @@
+Log file created at: 2016/12/15 18:30:45
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F1215 18:30:45.002724   716 db_leveldb.cpp:16] Check failed: status.ok() Failed to open leveldb H:/Caffe/caffe-windows-master/bin/examples/mnist/mnist-train-leveldb
+Invalid argument: H:/Caffe/caffe-windows-master/bin/examples/mnist/mnist-train-leveldb: does not exist (create_if_missing is false)

@@ -1,0 +1,169 @@
+Log file created at: 2016/12/15 18:28:16
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1215 18:28:16.872761  3880 caffe.cpp:312] Use CPU.
+I1215 18:28:16.881785  3880 net.cpp:313] The NetState phase (0) differed from the phase (1) specified by a rule in layer mnist
+I1215 18:28:16.882760  3880 net.cpp:313] The NetState phase (0) differed from the phase (1) specified by a rule in layer accuracy
+I1215 18:28:16.883759  3880 net.cpp:49] Initializing net from parameters: 
+name: "LeNet"
+state {
+  phase: TRAIN
+}
+layer {
+  name: "mnist"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "H:/Caffe/caffe-windows-master/bin/examples/mnist/mnist-train-leveldb"
+    batch_size: 64
+    backend: LEVELDB
+  }
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 20
+    kernel_size: 5
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "Insanity1"
+  type: "Insanity"
+  bottom: "pool1"
+  top: "pool1"
+}
+layer {
+  name: "conv2"
+  type: "Convolution"
+  bottom: "pool1"
+  top: "conv2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 50
+    kernel_size: 5
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "pool2"
+  type: "Pooling"
+  bottom: "conv2"
+  top: "pool2"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "relu2"
+  type: "Insanity"
+  bottom: "pool2"
+  top: "pool2"
+}
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "pool2"
+  top: "ip1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 500
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu3"
+  type: "Insanity"
+  bottom: "ip1"
+  top: "ip1"
+}
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "ip1"
+  top: "ip2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 10
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
+I1215 18:28:16.891758  3880 layer_factory.hpp:77] Creating layer mnist
+I1215 18:28:16.892758  3880 net.cpp:91] Creating Layer mnist
+I1215 18:28:16.893764  3880 net.cpp:399] mnist -> data
+I1215 18:28:16.894769  3880 net.cpp:399] mnist -> label
+F1215 18:28:16.900765  8632 db_leveldb.cpp:16] Check failed: status.ok() Failed to open leveldb H:/Caffe/caffe-windows-master/bin/examples/mnist/mnist-train-leveldb
+Invalid argument: H:/Caffe/caffe-windows-master/bin/examples/mnist/mnist-train-leveldb: does not exist (create_if_missing is false)

@@ -1,0 +1,4 @@
+Log file created at: 2016/12/15 17:28:43
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F1215 17:28:43.096101 12124 caffe.cpp:230] Check failed: FLAGS_model.size() > 0 (0 vs. 0) Need a model definition to score.

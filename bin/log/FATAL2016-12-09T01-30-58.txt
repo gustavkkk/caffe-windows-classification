@@ -1,0 +1,4 @@
+Log file created at: 2016/12/09 01:30:58
+Running on machine: FALCON-PC
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F1209 01:30:58.596611  7848 caffe.cpp:76] Unknown action: ?
